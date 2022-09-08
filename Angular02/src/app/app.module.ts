@@ -10,6 +10,17 @@ import { InicioComponent } from './inicio/inicio.component';
 import { PropertComponent } from './propert/propert.component';
 import { EventComponent } from './event/event.component';
 import { MaoDuplaComponent } from './mao-dupla/mao-dupla.component';
+import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
+import { ReceberDadosComponent } from './receber-dados/receber-dados.component';
+import { EnviarComponent } from './enviar/enviar.component';
+import { DiretivaIfComponent } from './diretiva-if/diretiva-if.component';
+import { DiretivaForComponent } from './diretiva-for/diretiva-for.component';
+import { LoginComponent } from './login/login.component';
+import { SegurancaService } from "./seguranca.service";
+import { DiretivasModule } from "./diretivas/diretivas.module";
+import { HttpClientModule } from "@angular/common/http";
+import { ConsumindoApiComponent } from './consumindo-api/consumindo-api.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +30,22 @@ import { MaoDuplaComponent } from './mao-dupla/mao-dupla.component';
     InicioComponent,
     PropertComponent,
     EventComponent,
-    MaoDuplaComponent
+    MaoDuplaComponent,
+    MenuComponent,
+    HeaderComponent,
+    ReceberDadosComponent,
+    EnviarComponent,
+    LoginComponent,
+    ConsumindoApiComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DiretivasModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SegurancaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
